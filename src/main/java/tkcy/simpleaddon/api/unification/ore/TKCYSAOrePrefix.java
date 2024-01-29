@@ -41,4 +41,8 @@ public class TKCYSAOrePrefix {
             TKCYSAMaterialIconType.zpmComponents, SELF_REFERENCING, null);
     public static final OrePrefix uvComponents = new OrePrefix("uvComponents", -1, MarkerMaterials.Empty,
             TKCYSAMaterialIconType.uvComponents, SELF_REFERENCING, null);
+
+    // OreBlocks
+    public static final OrePrefix casing = new OrePrefix("casing", M * 9, null, TKCYSAMaterialIconType.casing,
+            ENABLE_UNIFICATION, null);
 }
