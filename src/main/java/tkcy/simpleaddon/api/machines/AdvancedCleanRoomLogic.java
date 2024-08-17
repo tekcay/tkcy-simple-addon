@@ -2,6 +2,8 @@ package tkcy.simpleaddon.api.machines;
 
 import gregtech.api.GTValues;
 import gregtech.api.capability.impl.CleanroomLogic;
+import gregtech.api.metatileentity.multiblock.ICleanroomProvider;
+import gregtech.api.metatileentity.multiblock.IMaintenance;
 import net.minecraftforge.fluids.FluidStack;
 import tkcy.simpleaddon.common.metatileentities.electric.AdvancedCleanRoom;
 
@@ -17,5 +19,11 @@ public class AdvancedCleanRoomLogic extends CleanroomLogic {
     @Override
     protected boolean consumeEnergy(boolean simulate) {
         return super.consumeEnergy(simulate) && advancedCleanRoom.drainFluid(simulate);
+    }
+
+    @Override
+    protected void adjustCleanAmount(boolean shouldRemove) {
+        super.adjustCleanAmount(shouldRemove);
+        if (shouldRemove) {//performs steam sound, show particles}
     }
 }
